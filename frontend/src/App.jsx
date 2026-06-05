@@ -22,7 +22,7 @@ const App = () => {
 
 
   function fatchNotes(){
-    axios.get('http://localhost:3000/api/notes')
+    axios.get('https://server-creation-w1sd.onrender.com/api/notes')
     .then(res=>{
        setnote(res.data.notes)
     })
@@ -33,7 +33,7 @@ const App = () => {
 
     const {title,desc} = e.target.elements
 
-    axios.post('http://localhost:3000/api/notes',{
+    axios.post('https://server-creation-w1sd.onrender.com/api/notes',{
       title:title.value,
       desc:desc.value
     })
@@ -45,7 +45,7 @@ const App = () => {
 
   
   function handleDeleteButt(idx){
-    axios.delete('http://localhost:3000/api/notes/'+idx)
+    axios.delete('https://server-creation-w1sd.onrender.com/api/notes/'+idx)
     .then(res=>{
       fatchNotes()
       console.log(res.data)
@@ -63,7 +63,7 @@ const App = () => {
     const id = editValue
     const {edit} = e.target.elements
 
-    axios.patch('http://localhost:3000/api/notes/'+id,{
+    axios.patch('https://server-creation-w1sd.onrender.com/api/notes/'+id,{
       desc:edit.value
     })
     .then(res=>{
