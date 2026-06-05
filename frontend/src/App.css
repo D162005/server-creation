@@ -1,0 +1,34 @@
+.notes-container{
+  height: 100%;
+  width: 100%;
+  color: aliceblue;
+  display: flex;
+  padding: 2rem;
+  gap:3rem;
+  align-items: center;
+  
+}
+
+.note-container{
+  height: 10rem;
+  width: 10rem;
+  background-color: rgb(59, 59, 59);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap:1rem;
+
+}
+
+button{
+  padding: 0.2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.note-create-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
